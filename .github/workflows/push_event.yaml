@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: tar -xvzf nasapicoftheday.build.tar.gz *.*
-      - run: echo "Completed Task!"
+      - run: echo "Completed Task! "
