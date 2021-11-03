@@ -6,4 +6,4 @@
 
 ### Added
 
-- Keep-a-changelog plugin added by Eduardo Pereda.
+- by Eduardo Pereda.
