@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm nasapicoftheday.build.tar.gz
+      - run: rm -f nasapicoftheday.build.tar.gz
       - run: tar -xvzf nasapicoftheday.build.tar.gz *.*
       - run: echo "Completed Task!  "
