@@ -10,5 +10,11 @@ jobs:
       - run: echo "Completed Task!  "
       - uses: actions/upload-artifact@v2
         with:
-          name: output-tar
+          name: output-tar.tar.gz
           path: nasapicoftheday.build.tar.gz
+      - uses: docker://antonyurchenko/git-release:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NAME_PREFIX: "Release: "
+        with:
+          args: nasapicoftheday.build.tar.gz
