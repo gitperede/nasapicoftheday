@@ -1,4 +1,4 @@
-name: push_event
+name: Creating Release
 on: 
   push:
     tags:
