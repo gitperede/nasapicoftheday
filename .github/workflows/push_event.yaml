@@ -16,6 +16,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_NAME_PREFIX: "Release: "
-          CHANGELOG_FILE: none
+          CHANGELOG_FILE: ""
         with:
           args: nasapicoftheday.build.tar.gz
