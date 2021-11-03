@@ -17,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_NAME_PREFIX: "PeredaRelease: "
           #ALLOW_TAG_PREFIX: "false"
-          TAG_PREFIX_REGEX: "[a-z-]*"
+          TAG_PREFIX_REGEX: "[a-z]*"
           CHANGELOG_FILE: "CHANGELOG.md"
           ALLOW_EMPTY_CHANGELOG: "false"
           PRE_RELEASE: "true"
