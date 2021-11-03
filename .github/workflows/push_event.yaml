@@ -8,3 +8,8 @@ jobs:
       - run: rm -f nasapicoftheday.build.tar.gz
       - run: tar -czvf nasapicoftheday.build.tar.gz *.*
       - run: echo "Completed Task!  "
+      - name: Upload output file
+          uses: actions/upload-artifact@v2
+          with:
+            name: output-tar
+            path: nasapicoftheday.build.tar.gz
