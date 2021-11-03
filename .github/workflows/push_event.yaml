@@ -1,5 +1,7 @@
 name: push_event
 on: [push]
+  tags:
+  - "v*"
 jobs:
   register_push_on_a_file:
     runs-on: ubuntu-latest
