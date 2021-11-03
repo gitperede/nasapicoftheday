@@ -15,6 +15,10 @@ jobs:
       - uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_NAME_PREFIX: "Release: "
+          RELEASE_NAME_PREFIX: "PeredaRelease: "
+          ALLOW_TAG_PREFIX: "false"
+          CHANGELOG_FILE: "CHANGELOG.md"
+          ALLOW_EMPTY_CHANGELOG: "false"
+          PRE_RELEASE: "true"
         with:
           args: nasapicoftheday.build.tar.gz
