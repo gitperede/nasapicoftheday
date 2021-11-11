@@ -47,13 +47,36 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Welcome to NASA Pic of the Day</h1>
-      <p id="texto">We are team of talented designers making websites with Bootstrap</p>
+      <p id="pic_text">Here goes the explanation of the pic.</p>
     </div>
   </section><!-- End Heroo Section -->
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ <!-- ======= Footer ======= -->
+ <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
 
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -70,7 +93,7 @@
       .then(response => response.json())
       .then (function(data){
         document.getElementById("hero").style.background = "url("+data.url+") top center";
-        document.getElementById("texto").innerHTML = data.explanation;
+        document.getElementById("pic_text").innerHTML = data.explanation;
       })
       .catch(function(error) {
         console.log("This is an ERROR");
