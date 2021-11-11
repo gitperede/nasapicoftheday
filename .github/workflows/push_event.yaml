@@ -1,28 +1,18 @@
-name: Creating Release
+name: Creating Release of our website NASA Astronomy Picture of the Day
 on: 
   push:
     tags:
     - "v*"
 jobs:
-  register_push_on_a_file:
+  build_our_website:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm -f nasapicoftheday.build.tar.gz
       - run: tar -czvf nasapicoftheday.build.tar.gz *.*
       - run: echo "Completed Task!  $GITHUB_REF"
-      #- uses: actions/upload-artifact@v2
-      #  with:
-      #    name: output-tar.tar.gz
-      #    path: nasapicoftheday.build.tar.gz
       - uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          #RELEASE_NAME_PREFIX: "PeredaRelease: "
-          #ALLOW_TAG_PREFIX: "false "
-          #TAG_PREFIX_REGEX: "[a-z]*"
           CHANGELOG_FILE: "none"
-          #ALLOW_EMPTY_CHANGELOG: " false"
-          #PRE_RELEASE: "true"
         with:
           args: nasapicoftheday.build.tar.gz
