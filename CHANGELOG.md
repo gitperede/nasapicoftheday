@@ -9,5 +9,5 @@
 
 ### Added
 
-- by Eduardo Pereda.
+- by Eduardo Pereda..
 

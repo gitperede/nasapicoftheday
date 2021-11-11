@@ -11,10 +11,10 @@ jobs:
       - run: rm -f nasapicoftheday.build.tar.gz
       - run: tar -czvf nasapicoftheday.build.tar.gz *.*
       - run: echo "Completed Task!  $GITHUB_REF"
-      - uses: actions/upload-artifact@v2
-        with:
-          name: output-tar.tar.gz
-          path: nasapicoftheday.build.tar.gz
+      #- uses: actions/upload-artifact@v2
+      #  with:
+      #    name: output-tar.tar.gz
+      #    path: nasapicoftheday.build.tar.gz
       - uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
