@@ -7,13 +7,8 @@ jobs:
   build_our_website:
     runs-on: ubuntu-latest
     steps:
-      - run: export PWD=`pwd`
-      - run: echo $PWD
       - uses: actions/checkout@v2
-      - run: export PWD=`pwd`
-      - run: echo $PWD
       - run: tar -czvf nasapicoftheday.build.tar.gz *.*
-      - run: echo "Completed Task!  $GITHUB_REF"
       - uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
