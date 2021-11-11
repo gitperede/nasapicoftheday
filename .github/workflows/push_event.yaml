@@ -9,9 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cp index.html index.php
+      - run: pwd
       - run: cd ..
       - run: pwd
-      - run: echo `pwd`
       - run: tar -czvf nasapicoftheday.build.tar.gz nasapicoftheday
       #- run: tar -czvf nasapicoftheday.build.tar.gz .
       - uses: docker://antonyurchenko/git-release:latest
