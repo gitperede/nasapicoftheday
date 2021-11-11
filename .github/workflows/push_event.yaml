@@ -10,7 +10,7 @@ jobs:
       #- run: export PWD = `pwd`
       #- run: echo $PWD
       - uses: actions/checkout@v2
-      - run: export PWD = `pwd`
+      - run: export PWD=`pwd`
       - run: echo $PWD
       - run: tar -czvf nasapicoftheday.build.tar.gz *.*
       - run: echo "Completed Task!  $GITHUB_REF"
