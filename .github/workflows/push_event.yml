@@ -13,6 +13,5 @@ jobs:
       - uses: docker://antonyurchenko/git-release:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CHANGELOG_FILE: "none"
         with:
           args: nasapicoftheday.build.tar.gz
